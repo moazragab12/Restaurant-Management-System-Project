@@ -8,7 +8,7 @@ package projectpart1;
  *
  * @author dell
  */
-public abstract class Stuff {
+public class Stuff {
    private int salary ;
    private int ID=1;
    private static int count=1;

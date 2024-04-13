@@ -24,6 +24,11 @@ public class Tables {
          table_no=count;
         count++;
     }
+
+    public Tables(String table_status) {
+        this.table_status = table_status; /* to initialize the initial status */
+    }
+
     //setter and getter
     public int getTable_no() {
         return table_no;
