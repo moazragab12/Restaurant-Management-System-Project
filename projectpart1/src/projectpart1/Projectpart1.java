@@ -14,7 +14,13 @@ public class Projectpart1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+     Receptionist  s1 = new Receptionist ();
+     
+      System.out.println(s1.getID());
+      s1.reserve(1);
+        s1.reserve(5);
+         s1.change_status(1);
+         s1.reserve(5);
     }
     
 }
