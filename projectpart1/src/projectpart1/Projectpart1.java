@@ -20,7 +20,7 @@ public class Projectpart1 {
      
       s1.reserve(3);
            s1.reserve(6);
-         s1.change_status(1);
+        // s1.change_status(1);
             s1.reserve(5);
             s1.change_status(2);
           s1.reserve(5);

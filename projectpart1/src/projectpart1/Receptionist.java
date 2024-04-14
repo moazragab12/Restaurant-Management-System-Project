@@ -25,42 +25,37 @@ public class Receptionist extends Stuff{
     
     // to reserve any table 
  public void reserve (int no_of_people){
-     if (flag==4){
-      System.out.println ("sorry rhis table not available");
-     }
-     else{
+             flag =0;
       for (int i=0 ;i< 4 ;i++){
-           if (no_of_people <=5) { 
+          //System.out.println(flag);
+             if (flag>=4){
+             System.out.println ("sorry rhis table not available");
+             break;}
+             if (no_of_people <=5) { 
                 
                 int m=tables[i].reserve_table();
                      if (m> 0){
-                    
-                      System.out.println ("you reserved table no "+ m );
-                     break; }
-                      else {  
-                      flag++;  
+                        System.out.println ("you reserved table no "+ m );
+                        break; }
+                     else {  
+                        flag++;  
                         } }
-           else if (no_of_people <=10  &&  no_of_people >5) {
-               int m= tables[i].reserve_table();       
-               if (m ==0){ 
-                     
-                      flag ++;
-                      continue ;
-                       }
-                     if (flag <=2){
-                    
-                System.out.println ("you reserved table no "+ m );
-    System.out.println ("you reserved table no "+ tables[i+1].reserve_table() );
-                break;
-               }
-               else 
-               {
-                   System.out.println ("sorry rhis table not available");
-               }
-        
-                 }
-     }
- }}
+            else if (no_of_people <=10  &&  no_of_people >5) {
+            //  flag=0;
+                    if (flag <=2){
+                     int m= tables[i].reserve_table();       
+                          if (m ==0){ 
+                          flag ++;
+                          continue ; }
+                    System.out.println ("you reserved  two table no "+ m+"and"+tables[i+1].reserve_table() );
+                     break; }
+                     else 
+                         {
+                              System.out.println ("sorry rhis table not available");
+                              break; }
+             }
+        }
+    }
    // to canncelled reserve or change table status
  public void change_status (int table_no){
      
