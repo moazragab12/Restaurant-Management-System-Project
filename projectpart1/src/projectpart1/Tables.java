@@ -10,26 +10,26 @@ import java.util.ArrayList;
  *
  * @author dell
  */
-public class Tables extends Resturant{
-    
-    protected ArrayList<String>table_status = new ArrayList<>(getTablesNumber());
-
-    public Tables(String name, String address) {
-        super(name, address);
-    }
-    
-    
-     public ArrayList<String> getTable_status() {
-        return table_status;
-    }
-
-    public void setTable_status(ArrayList<String> table_status) {
-        this.table_status = table_status;
-    }
-    
-    
-    
-    
+public class Tables {
+//    
+//    protected ArrayList<String>table_status = new ArrayList<>(getTablesNumber());
+//
+//    public Tables(String name, String address) {
+//        super(name, address);
+//    }
+//    
+//    
+//     public ArrayList<String> getTable_status() {
+//        return table_status;
+//    }
+//
+//    public void setTable_status(ArrayList<String> table_status) {
+//        this.table_status = table_status;
+//    }
+//    
+//    
+//    
+//    
     
     
     
