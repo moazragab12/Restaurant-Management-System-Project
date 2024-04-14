@@ -21,13 +21,17 @@ public class Order implements Comparable<Order> {
 
     public Order() {
         orderId = orderLastNo++;
-        orderedItems = new ArrayList<String>();
         status = Status.PENDING;
     }
 
     public Order(ArrayList<String> orderedItems) {
         this();
         this.orderedItems = orderedItems;
+
+    }
+    public Order(ArrayList<String> orderedItems,Bill bill) {
+       this(orderedItems);
+         this.bill = bill;
 
     }
 
