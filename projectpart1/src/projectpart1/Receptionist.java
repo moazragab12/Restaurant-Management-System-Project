@@ -29,7 +29,7 @@ public class Receptionist extends Stuff{
       for (int i=0 ;i< 4 ;i++){
           //System.out.println(flag);
              if (flag>=4){
-             System.out.println ("sorry rhis table not available");
+             System.out.println ("sorry this table not available");
              break;}
              if (no_of_people <=5) { 
                 
