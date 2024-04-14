@@ -18,11 +18,12 @@ public class Projectpart1 {
     public static void main(String[] args) {
      Receptionist  s1 = new Receptionist ();
      
-      System.out.println(s1.getID());
-      s1.reserve(1);
-        s1.reserve(5);
+      s1.reserve(3);
+           s1.reserve(6);
          s1.change_status(1);
-         s1.reserve(5);
+            s1.reserve(5);
+            s1.change_status(2);
+          s1.reserve(5);
          
          /////////////////////////////////////////////////////////
          ///////////////////////////////////////////////////////
