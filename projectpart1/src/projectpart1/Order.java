@@ -12,6 +12,7 @@ enum Status {PENDING, DELIVERED, DONE, PAID}
 
 
 public class Order implements Comparable<Order> {
+    private int tableNo;
     private int orderId;
     static int orderLastNo = 1;
     Bill bill;
@@ -24,13 +25,13 @@ public class Order implements Comparable<Order> {
         status = Status.PENDING;
     }
 
-    public Order(ArrayList<String> orderedItems) {
+    public Order(ArrayList<String> orderedItems, int tableNo) {
         this();
         this.orderedItems = orderedItems;
-
+      this.tableNo = tableNo;
     }
-    public Order(ArrayList<String> orderedItems,Bill bill) {
-       this(orderedItems);
+    public Order(ArrayList<String> orderedItems,Bill bill, int tableNo) {
+       this(orderedItems,tableNo);
          this.bill = bill;
 
     }

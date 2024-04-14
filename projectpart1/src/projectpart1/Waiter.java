@@ -16,7 +16,9 @@ public class Waiter extends Stuff {
             System.out.println("Enter the item you want to order");
             items.add(in.next());
         }
-        Order order = new Order(items);
+        System.out.println("Enter table number");
+        n = in.nextInt();
+        Order order = new Order(items, n);
         orders.add(order);
     }
 
@@ -25,7 +27,6 @@ public class Waiter extends Stuff {
      * It asks the user to enter the order number they want to modify
      * Then it asks the user to enter the number of items they want to add
      * Then it asks the user to enter the items they want to add
-     *
      */
     public void modify_order() {
         System.out.println("Enter the order number you want to modify");
