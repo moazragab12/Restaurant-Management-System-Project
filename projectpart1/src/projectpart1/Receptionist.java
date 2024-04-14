@@ -3,70 +3,74 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package projectpart1;
+import static java.lang.Math.ceil;
+import java.util.ArrayList;
+import java.util.Collections;
 
-import static projectpart1.Resturant.getTables;
 
-/**
- *
- * @author dell
- */
 public class Receptionist extends Stuff{
+     ArrayList<String> tabLi;
+        
+     
+     
+     
+  // tab.setTab_status(tabLi);
+    public Receptionist(int NoTable) {
+        this.tabLi = new ArrayList<>(Collections.nCopies( NoTable, "empty"));
     
-   
-   Tables[] tables = getTables();
-   int flag = 0 ;
-     //constructor
-    public Receptionist() {
     }
 
-    public Receptionist(int salary, String roles, int dayoff) {
+        int flag=0;
+    public Receptionist(int salary, String roles, int dayoff, int NoTable ) {
         super(salary, roles, dayoff);
+        this.tabLi = new ArrayList<>(Collections.nCopies( NoTable, "empty"));
     }
-    
     // to reserve any table 
- public void reserve (int no_of_people){
-             flag =0;
-      for (int i=0 ;i< 4 ;i++){
-          //System.out.println(flag);
-             if (flag>=4){
-             System.out.println ("sorry this table not available");
-             break;}
-             if (no_of_people <=5) { 
-                
-                int m=tables[i].reserve_table();
-                     if (m> 0){
-                        System.out.println ("you reserved table no "+ m );
-                        break; }
-                     else {  
-                        flag++;  
-                        } }
-            else if (no_of_people <=10  &&  no_of_people >5) {
-            //  flag=0;
-                    if (flag <=2){
-                     int m= tables[i].reserve_table();       
-                          if (m ==0){ 
-                          flag ++;
-                          continue ; }
-                    System.out.println ("you reserved  two table no "+ m+"and"+tables[i+1].reserve_table() );
-                     break; }
-                     else 
-                         {
-                              System.out.println ("sorry rhis table not available");
-                              break; }
-             }
-        }
+    public void reserve (int no_of_people){
+    if (tabLi.contains("empty")){
+     //System.out.println(" table");
+      if(no_of_people<=5){
+          System.out.println("table"+(tabLi.indexOf("empty")+1));
+    tabLi.set(tabLi.indexOf("empty"), "occupied") ;
+      }
+      else{ 
+        //  System.out.println(" here");
+     for(int i= 0; i<tabLi.size();i++){
+    if(tabLi.get(i).equals("empty"))
+    {flag++;
+   // System.out.println("f"+flag+"i"+i);
     }
-   // to canncelled reserve or change table status
- public void change_status (int table_no){
-     
-      for (int i=0 ;i< 4 ;i++){
-      if ( table_no == i+1)
- {
-  tables[i].toempty();
-  flag--;
- }
- }
+
+   } 
+       if(flag<=ceil(no_of_people/5)){
+     System.out.println("not fount");
+       }
+//       flag=0;
+//        break;}
+       else{
+        for(int y=0;y<ceil(no_of_people/5);y++){
+             // System.out.println(" here22");
+              System.out.println("table"+(tabLi.indexOf("empty")+1));
+             tabLi.set(tabLi.indexOf("empty"), "occupied") ;
+        }}      
+    } flag=0;
+    }
+    else {
+    System.out.println("no table");}
+    }
+     public void displaytab(){ 
+      for(int i=0 ; i< tabLi.size() ; i++  ){    
+      System.out.println("\t"+tabLi.get(i));
+     }}  
+    
+ public void removeReserve(int NoTable)
+ { tabLi.set(NoTable-1,"empty");
+  }
+ public void TableCanReserve()
+ { for(int i= 0; i<tabLi.size();i++){
+    if(tabLi.get(i).equals("empty"))
+    { System.out.println("table"+(i+1));
+  }
  
- 
- }
 }
+ }}
