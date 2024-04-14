@@ -1,33 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projectpart1;
 
 /**
  *
- * @author dell
+ * @author youssef
  */
 public class Resturant {
     private String name;
     private String address;
-    private int tablesNumber=4;
-    protected static Tables[] tables ={new Tables("empty") ,new Tables("empty"),new Tables("empty"),new Tables("empty")};
+    private  int tablesNumber;
     private Stuff employees;
+    protected static Tables[] tables;
     //constructor
     public Resturant(String name, String address) {
         this.name = name;
         this.address = address;
     }
 
-    public Resturant(String name, String address,  Stuff employees) {
-        this.name = name;
-        this.address = address;
-        this.employees = employees;
-        this.tables = new Tables[tablesNumber];
-//        for(int i=0; i<tablesNumber; i++) {
-//            tables[i] = new Tables("empty");
-//        }
+    public Resturant(String name, String address, int tablesNumber,  Stuff employees) {
+        this(name, address);
+        if(employees!=null)
+            this.employees = employees;
+        else System.out.println("Employees is Null");
+
+        if(tablesNumber<0) System.out.println("Invalid Number of Tables, enter Positive number");
+        else {
+            this.tables = new Tables[tablesNumber];
+            for(int i=0; i<tablesNumber; i++) {
+                tables[i] = new Tables("empty");
+            }
+        }
     }
 
     public String getName() {
@@ -50,7 +51,7 @@ public class Resturant {
         return tablesNumber;
     }
 
-    public void setTablesNumber(int tablesNumber) {
+    protected void setTablesNumber(int tablesNumber) {
         this.tablesNumber = tablesNumber;
     }
 

@@ -17,7 +17,7 @@ public class Projectpart1 {
      */
     public static void main(String[] args) {
      Receptionist  s1 = new Receptionist ();
-     
+     Person me = new Person("youssefsama", 11991);
       s1.reserve(3);
            s1.reserve(6);
         // s1.change_status(1);
