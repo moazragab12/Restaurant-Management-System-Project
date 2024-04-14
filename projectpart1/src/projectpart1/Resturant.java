@@ -1,40 +1,57 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package projectpart1;
-
+import java.util.ArrayList;
 /**
  *
- * @author youssef
+ * @author dell
  */
 public class Resturant {
+   
     private String name;
     private String address;
-    private  int tablesNumber;
+    public static int tablesNumber;
+   // private Tables[] tables;
     private Stuff employees;
-    protected static Tables[] tables;
-    //constructor
+
     public Resturant(String name, String address) {
         this.name = name;
         this.address = address;
     }
-
-    public Resturant(String name, String address, int tablesNumber,  Stuff employees) {
-        this(name, address);
-        if(employees!=null)
-            this.employees = employees;
-        else System.out.println("Employees is Null");
-
-        if(tablesNumber<0) System.out.println("Invalid Number of Tables, enter Positive number");
-        else {
-            this.tables = new Tables[tablesNumber];
-            for(int i=0; i<tablesNumber; i++) {
-                tables[i] = new Tables("empty");
-            }
-        }
+    
+    public Resturant(String name, String address,int tablesNumber) {
+        this.name = name;
+        this.address = address;
+        this.tablesNumber = tablesNumber;
     }
 
+    public Resturant(String name, String address, int tablesNumber, Stuff employees) {
+        this.name = name;
+        this.address = address;
+        this.tablesNumber = tablesNumber;
+        this.employees = employees;
+
+    }
+
+//    public Resturant(String name, String address, int tablesNumber,  Stuff employees) {
+//        this(name, address);
+//        if(employees!=null)
+//            this.employees = employees;
+//        else System.out.println("Employees is Null");
+//
+//        if(tablesNumber<0) System.out.println("Invalid Number of Tables, enter Positive number");
+//        else {
+//            this.tables = new Tables[tablesNumber];
+//            for(int i=0; i<tablesNumber; i++) {
+//                tables[i] = new Tables("empty");
+//            }
+//        }
     public String getName() {
         return name;
     }
-    //setter and getter
+
     public void setName(String name) {
         this.name = name;
     }
@@ -47,7 +64,7 @@ public class Resturant {
         this.address = address;
     }
 
-    public int getTablesNumber() {
+    public static int getTablesNumber() {
         return tablesNumber;
     }
 
@@ -55,13 +72,7 @@ public class Resturant {
         this.tablesNumber = tablesNumber;
     }
 
-    public static Tables[] getTables() {
-        return tables;
-    }
 
-    public void setTables(Tables[] tables) {
-        this.tables = tables;
-    }
 
     public Stuff getEmployees() {
         return employees;
@@ -71,3 +82,4 @@ public class Resturant {
         this.employees = employees;
     }
 }
+
