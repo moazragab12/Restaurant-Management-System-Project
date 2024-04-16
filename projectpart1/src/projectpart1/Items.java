@@ -9,10 +9,15 @@ package projectpart1;
  * @author Dell
  */
 import java.util.ArrayList;
+
 public interface Items {
-    
+   
+
     public abstract void additem(String type,String item,double price);
     public abstract void removeitem(String item);
     public void changeprice(String item, double new_price);
+    public double getprice (String item);
+    public void search (String item);
 }
+
 

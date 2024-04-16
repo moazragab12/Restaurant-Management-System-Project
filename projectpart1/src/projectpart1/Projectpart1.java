@@ -40,33 +40,43 @@ public class Projectpart1 {
          ///////////////////////////////////////////////////////
          
          
-         System.out.println("\n"+"Esraa"+"\n");
-   
+        System.out.println("\n"+"Esraa"+"\n");
+
+
         ArrayList<String> menuList = new ArrayList<>();
         menuList.add("fish");
         menuList.add("meat");
+        menuList.add("chicken");
         menuList.add("coffee");
- 
+        menuList.add("tea");
+    
+         
         ArrayList<Double> priceList = new ArrayList<>();
         priceList.add(200.0);
         priceList.add(300.0);
+        priceList.add(700.0);
         priceList.add(100.0);
-
+        priceList.add(500.0);
+       
+        
         ArrayList<String> typeList = new ArrayList<>();
         typeList.add("dish");
         typeList.add("dish");
+        typeList.add("dish");
+        typeList.add("drink");
         typeList.add("drink");
 
-        Menu item =new Menu(typeList,menuList,priceList);
+         Menu item =new Menu(typeList,menuList,priceList);
 
-        item.additem("dish","chicken",900);
-        item.additem("dish", "pizza",150);
-        item.additem("drink", "tea", 50);
-        item.displayMenu();
-        System.out.println("end");
-   /////////////////////////////////////////////////////////////
-   /////////////////////////////////////////////////////////////
-         
-    }
+          item.additem("dish", "pizza",150);
+          item.additem("drink", "tea", 500);
+          item.additem("dessert", "cakes", 3500);
+        
+  
+          item.displayMenu();
+          item.search("tea");
+          item.search("k");
+   
     
-}
+    }
+    }
