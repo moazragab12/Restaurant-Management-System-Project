@@ -3,11 +3,24 @@ package projectpart1;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
-
+/**
+ *
+ * @author Moaz
+ */
+/**
+ * Represents a waiter in a restaurant, inheriting from the Stuff class.
+ */
 public class Waiter extends Stuff {
+
+    /** The list of orders managed by the waiter. */
     private ArrayList<Order> orders;
+
+    /** Scanner object for user input. */
     Scanner in = new Scanner(System.in);
 
+    /**
+     * Allows the waiter to create a new order.
+     */
     public void make_order() {
         System.out.println("Enter the number of items you want to order");
         int n = in.nextInt();
@@ -23,10 +36,7 @@ public class Waiter extends Stuff {
     }
 
     /**
-     * This method is used to modify the order by adding or removing items from the order list
-     * It asks the user to enter the order number they want to modify
-     * Then it asks the user to enter the number of items they want to add
-     * Then it asks the user to enter the items they want to add
+     * Allows the waiter to modify an existing order by adding or removing items.
      */
     public void modify_order() {
         System.out.println("Enter the order number you want to modify");
@@ -49,25 +59,32 @@ public class Waiter extends Stuff {
         orders.get(n).orderedItems.removeAll(items);
     }
 
+    /**
+     * Allows the waiter to cancel an existing order.
+     */
     public void cancel_order() {
         System.out.println("Enter the order number you want to cancel");
         int n = in.nextInt();
         orders.remove(n);
-
     }
 
+    /**
+     * Allows the waiter to add a bill to an existing order.
+     */
     public void addbill() {
-        System.out.println("Enter the order number you want to add bill to and its cutomer id");
+        System.out.println("Enter the order number you want to add bill to and its customer id");
         int n = in.nextInt();
         int m = in.nextInt();
         Date date = new Date();
         orders.get(n).create_bill(m, date, orders.get(n).orderedItems);
     }
 
+    /**
+     * Allows the waiter to delete a bill from an existing order.
+     */
     public void deletebill() {
         System.out.println("Enter the order number you want to delete bill from");
         int n = in.nextInt();
         orders.get(n).bill = null;
     }
-
 }
