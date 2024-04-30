@@ -9,8 +9,9 @@ package projectpart1;
  * @author dell
  */
 import java.util.ArrayList;
-
-public class Menu implements Items{
+import java.util.Collections;
+//import java.util.Comparator;
+public class Menu extends Items implements Comparable<Menu>{
     protected ArrayList<String>menuitems = new ArrayList<>();
     protected ArrayList<Double>price_menuitems=new ArrayList<>();
     protected ArrayList<String>type_menuitems = new ArrayList<>();
@@ -124,12 +125,39 @@ public class Menu implements Items{
         }
         if(flag==0)
             System.out.println("The menu does not contain this element.");
-        else {
+        else 
             System.out.println("The menu does contain "+item +" and this price " +this.getprice(item) );
-            }
+             
         
      } 
-    
-    
-    
+
+    @Override
+    public int compareTo(Menu other) {
+        double price=this.price_menuitems.isEmpty() ? 0 : this.price_menuitems.get(0);
+        double otherPrice = other.price_menuitems.isEmpty() ? 0 : other.price_menuitems.get(0);
+        // Compare prices
+        if (price < otherPrice) {
+            return -1;
+        } else if (price > otherPrice) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+
+
+    void Sortprice( Menu o ) {
+        Menu x = new Menu();
+        x.menuitems.addAll(o.menuitems);
+        x.price_menuitems.addAll(o.price_menuitems);
+        x.type_menuitems.addAll(o.type_menuitems);
+        Collections.sort(o.price_menuitems); 
+        for(int i=0;i<o.price_menuitems.size();i++){
+            int index= x.price_menuitems.indexOf(o.price_menuitems.get(i));
+            System.out.println(type_menuitems.get(index)+"\t"+menuitems.get(index)+"\t"+price_menuitems.get(i));
+        }
+    }
+
+  
 }
