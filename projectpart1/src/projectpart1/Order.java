@@ -3,8 +3,8 @@ package projectpart1;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
+
 /**
- *
  * @author Moaz
  */
 enum Type {
@@ -12,27 +12,41 @@ enum Type {
 }
 
 enum Status {PENDING, DELIVERED, DONE, PAID}
+
 /**
  * Represents an order made by a customer in a restaurant.
  */
 //public class Order implements Comparable<Order> {
-public class Order  {
-    /** The number of the table where the order is placed. */
+public class Order {
+    /**
+     * The number of the table where the order is placed.
+     */
     private int tableNo;
 
-    /** The unique identifier of the order. */
+
+    /**
+     * The unique identifier of the order.
+     */
     private int orderId;
 
-    /** The last order number generated. */
+    /**
+     * The last order number generated.
+     */
     static int orderLastNo = 1;
 
-    /** The bill associated with the order. */
+    /**
+     * The bill associated with the order.
+     */
     Bill bill;
 
-    /** The list of items ordered. */
+    /**
+     * The list of items ordered.
+     */
     ArrayList<String> orderedItems;
 
-    /** The status of the order. */
+    /**
+     * The status of the order.
+     */
     Status status;
 
     /**
@@ -45,8 +59,9 @@ public class Order  {
 
     /**
      * Constructs an order with the specified items and table number.
+     *
      * @param orderedItems The list of items ordered.
-     * @param tableNo The number of the table where the order is placed.
+     * @param tableNo      The number of the table where the order is placed.
      */
     public Order(ArrayList<String> orderedItems, int tableNo) {
         this();
@@ -56,9 +71,10 @@ public class Order  {
 
     /**
      * Constructs an order with the specified items, bill, and table number.
+     *
      * @param orderedItems The list of items ordered.
-     * @param bill The bill associated with the order.
-     * @param tableNo The number of the table where the order is placed.
+     * @param bill         The bill associated with the order.
+     * @param tableNo      The number of the table where the order is placed.
      */
     public Order(ArrayList<String> orderedItems, Bill bill, int tableNo) {
         this(orderedItems, tableNo);
@@ -67,6 +83,7 @@ public class Order  {
 
     /**
      * Gets the last order number generated.
+     *
      * @return The last order number generated.
      */
     public static int getOrderlastNo() {
@@ -74,7 +91,18 @@ public class Order  {
     }
 
     /**
+     * Gets the Table number.
+     *
+     * @return The Table number of the order.
+     */
+
+    public int getTableNo() {
+        return tableNo;
+    }
+
+    /**
      * Adds an item to the order.
+     *
      * @param item The item to be added.
      */
     public void add_item(String item) {
@@ -83,6 +111,7 @@ public class Order  {
 
     /**
      * Removes an item from the order.
+     *
      * @param item The item to be removed.
      */
     public void remove_item(String item) {
@@ -91,8 +120,9 @@ public class Order  {
 
     /**
      * Creates a bill for the order.
-     * @param customerId The ID of the customer associated with the bill.
-     * @param date The date of the bill creation.
+     *
+     * @param customerId   The ID of the customer associated with the bill.
+     * @param date         The date of the bill creation.
      * @param orderedItems The list of items included in the bill.
      */
     public void create_bill(int customerId, Date date, ArrayList<String> orderedItems) {
@@ -101,6 +131,7 @@ public class Order  {
 
     /**
      * Gets the bill associated with the order.
+     *
      * @return The bill associated with the order.
      */
     public Bill getBill() {
@@ -109,6 +140,7 @@ public class Order  {
 
     /**
      * Gets the status of the order.
+     *
      * @return The status of the order.
      */
     public Status getStatus() {
@@ -117,6 +149,7 @@ public class Order  {
 
     /**
      * Sets the status of the order.
+     *
      * @param status The status to be set.
      */
     public void setStatus(Status status) {
