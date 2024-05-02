@@ -20,7 +20,6 @@ public class Projectpart1 {
        
        ////////////////////////
         System.out.println("\n"+"Alaa"+"\n");
-       Resturant r=new Resturant("Zaqzuqa","2100482");
        r.setTablesNumber(5);
        Receptionist  s1 = new Receptionist (r.getTablesNumber());
        s1.reserve(10);
@@ -80,8 +79,7 @@ public class Projectpart1 {
           item.search("k");
    
           
-          
-   /*........................Exception_Handling....................*/       
+      /*........................Exception_Handling....................*/       
           
 //    boolean check =true;
 //    Scanner scanner= new Scanner (System.in);
