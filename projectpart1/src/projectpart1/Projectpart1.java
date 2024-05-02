@@ -40,33 +40,80 @@ public class Projectpart1 {
          ///////////////////////////////////////////////////////
          
          
-         System.out.println("\n"+"Esraa"+"\n");
-   
+        System.out.println("\n"+"Esraa"+"\n");
+
+
         ArrayList<String> menuList = new ArrayList<>();
         menuList.add("fish");
         menuList.add("meat");
+        menuList.add("chicken");
         menuList.add("coffee");
- 
+        menuList.add("tea");
+    
+         
         ArrayList<Double> priceList = new ArrayList<>();
-        priceList.add(200.0);
+        priceList.add(400.0);
+        priceList.add(700.0);
         priceList.add(300.0);
         priceList.add(100.0);
-
+        priceList.add(50.0);
+       
+        
         ArrayList<String> typeList = new ArrayList<>();
         typeList.add("dish");
         typeList.add("dish");
+        typeList.add("dish");
+        typeList.add("drink");
         typeList.add("drink");
 
         Menu item =new Menu(typeList,menuList,priceList);
-
-        item.additem("dish","chicken",900);
-        item.additem("dish", "pizza",150);
-        item.additem("drink", "tea", 50);
-        item.displayMenu();
-        System.out.println("end");
-   /////////////////////////////////////////////////////////////
-   /////////////////////////////////////////////////////////////
          
+        
+        //test function add
+          item.additem("dish", "pizza",150);
+          item.additem("drink", "tea", 50);
+          item.additem("dessert", "cakes", 350);
+        
+        // test function search
+          item.displayMenu();
+          item.search("tea");
+          item.search("k");
+   
+          
+          
+   /*........................Exception_Handling....................*/       
+          
+//    boolean check =true;
+//    Scanner scanner= new Scanner (System.in);
+//    System.out.println("Enter type of new item in menu");
+//    String type=scanner.next();
+//    System.out.println("Enter name of new item in menu");
+//    String Name=scanner.next();
+//    
+//     do{
+//    try{
+//    System.out.println("Enter Number");
+//    float price= scanner.nextFloat();
+//    //System.out.println(price);
+//    item.additem(type, Name,price);
+//    check=false;
+//    }
+//    catch(java.util.InputMismatchException ex){
+//    System.out.println("Incorrect , Try again ");
+//    scanner.nextLine();
+//    
+//    } }while(check);
+//          
+//          
+//      item.displayMenu();  
+/*........................end..................*/
+  
+
+
+   // test sort function
+        item.displayMenu();
+        System.out.println("\n");
+        item.Sortprice(item);
+
     }
-    
-}
+    }
