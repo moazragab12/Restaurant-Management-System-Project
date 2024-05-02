@@ -34,7 +34,7 @@ public class Projectpart1 {
        System.out.println("after ");
        s1.removeReserve(4);
        s1.displaytab();
-       s1.TableCanReserve();
+       //s1.TableCanReserve();
          
          /////////////////////////////////////////////////////////
          ///////////////////////////////////////////////////////
