@@ -4,18 +4,27 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 /**
- *
  * @author Moaz
  */
+
 /**
  * Represents a waiter in a restaurant, inheriting from the Stuff class.
  */
 public class Waiter extends Stuff {
 
-    /** The list of orders managed by the waiter. */
+    /**
+     * The list of orders managed by the whole waiters.
+     */
+    private static ArrayList<Order> All_orders;
+
+    /**
+     * The list of orders managed by  single waiter.
+     */
     private ArrayList<Order> orders;
 
-    /** Scanner object for user input. */
+    /**
+     * Scanner object for user input.
+     */
     Scanner in = new Scanner(System.in);
 
     /**
@@ -33,6 +42,7 @@ public class Waiter extends Stuff {
         n = in.nextInt();
         Order order = new Order(items, n);
         orders.add(order);
+        All_orders.add(order);
     }
 
     /**
@@ -66,6 +76,29 @@ public class Waiter extends Stuff {
         System.out.println("Enter the order number you want to cancel");
         int n = in.nextInt();
         orders.remove(n);
+        All_orders.remove(n);
+    }
+
+    /**
+     * Allows  to view all orders from all waiters together
+     */
+
+    static void view_all_orders() {
+        for (int i = 0; i < All_orders.size(); i++) {
+            System.out.println("Order number: " + i);
+            System.out.println("Table number: " + All_orders.get(i).getTableNo());
+            System.out.println("Ordered items: ");
+            for (int j = 0; j < All_orders.get(i).orderedItems.size(); j++) {
+                System.out.println(All_orders.get(i).orderedItems.get(j));
+            }
+            if (All_orders.get(i).bill != null) {
+                System.out.println("Bill number: " + All_orders.get(i).bill.get_billNo());
+                System.out.println("Customer ID: " + All_orders.get(i).bill.get_customerId());
+                System.out.println("Total price: " + All_orders.get(i).bill.get_Total_Price());
+                System.out.println("Date: " + All_orders.get(i).bill.date);
+                System.out.println("Status: " + All_orders.get(i).bill.status);
+            }
+        }
     }
 
     /**
