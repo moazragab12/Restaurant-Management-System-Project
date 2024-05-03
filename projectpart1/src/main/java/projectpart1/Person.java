@@ -9,6 +9,8 @@ public class Person {
     private String address;
     private int contactNumber;
 
+    public Person() {}
+
     public Person(String name, int contactNumber) {
         boolean flag =true;
         ////////////////////*Checking the Name*///////////////////////

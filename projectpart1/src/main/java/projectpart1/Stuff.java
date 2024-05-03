@@ -8,7 +8,7 @@ package projectpart1;
  *
  * @author dell
  */
-public class Stuff {
+public class Stuff extends Person {
    private int salary ;
    private int ID=1;
    private static int count=1;
