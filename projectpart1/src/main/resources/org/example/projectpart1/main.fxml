@@ -23,7 +23,7 @@
         </ScrollPane>
         <VBox alignment="CENTER" layoutX="499.0" layoutY="302.0" prefHeight="155.0" prefWidth="159.0" spacing="20.0">
          <children>
-            <ChoiceBox fx:id="choiceBox" onMouseEntered="#addOrder" prefWidth="150.0" />
+            <ChoiceBox fx:id="choiceBox" onMouseClicked="#addOrder" prefWidth="150.0" />
             <Button mnemonicParsing="false" onAction="#addCard" text="Add Order" />
             <Button mnemonicParsing="false" onAction="#remove" text="Remove indexed Order " />
          </children></VBox>

@@ -54,10 +54,7 @@ TextField removalText;
     public void addOrder() {
 
         if (choiceBox.getValue().equals(DEFAULT)) {
-            if (!(MyOrder.isEmpty())) {
-                addCard();
 
-            }
             return;
         }
 
@@ -66,6 +63,12 @@ TextField removalText;
 
     }
     public void addCard() {
+        if (!choiceBox.getValue().equals(DEFAULT)) {
+
+
+            MyOrder.add(choiceBox.getValue());
+            choiceBox.setValue(DEFAULT);
+        }
         //doesnot care about table no and type
         Order order = new Order((ArrayList<String>) MyOrder, 3, OrderStatus.READY);
         System.out.println(order.getStatus());
