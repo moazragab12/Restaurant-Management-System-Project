@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="891.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.projectpart1.HelloController">
+   <children>
+      <Button layoutX="280.0" layoutY="535.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="87.0" prefWidth="219.0" text="Switch to scene2" />
+      <ImageView fx:id="Firstimg" fitHeight="176.0" fitWidth="125.0" layoutX="573.0" layoutY="96.0" onMouseEntered="#ScalerinTopright" onMouseExited="#ScaleroutTopright" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/Alaa.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img2" fitHeight="176.0" fitWidth="130.0" layoutX="148.0" layoutY="82.0" onMouseEntered="#ScalerinTopleft" onMouseExited="#ScaleroutTopleft" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/Esraa.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="leftbot" fitHeight="160.0" fitWidth="164.0" layoutX="148.0" layoutY="400.0" onMouseEntered="#ScalerinBotLeft" onMouseExited="#ScaleroutBotLeft" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/Youssef.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rightbot" fitHeight="184.0" fitWidth="153.0" layoutX="570.0" layoutY="376.0" onMouseEntered="#ScalerinBotRight" onMouseExited="#ScaleroutBotRight" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/Bassant.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="middleimg" fitHeight="248.0" fitWidth="194.0" layoutX="328.0" layoutY="193.0" onMouseEntered="#ScalerinMid" onMouseExited="#ScaleroutMid" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/Moaz.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
