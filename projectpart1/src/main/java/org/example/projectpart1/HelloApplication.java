@@ -48,11 +48,11 @@ public class HelloApplication extends Application {
         menuitems.add("Koshari");
         menuitems.add("Burger");
         menuitems.add("Sushi");
-        price_menuitems.add(65.3);
-        price_menuitems.add(60.3);
+        price_menuitems.add(33.33);
+        price_menuitems.add(5.33);
         price_menuitems.add(20.5);
-        price_menuitems.add(20.6);
-        price_menuitems.add(30.3);
+        price_menuitems.add(33.33);
+        price_menuitems.add(43.5);
         Mainmenu=new Menu(type_menuitems,menuitems,price_menuitems);
 
         launch();

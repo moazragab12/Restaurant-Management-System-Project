@@ -70,11 +70,11 @@ TextField removalText;
             choiceBox.setValue(DEFAULT);
         }
         //doesnot care about table no and type
-        Order order = new Order((ArrayList<String>) MyOrder, 3, OrderStatus.READY);
+        Order order = new Order((ArrayList<String>) MyOrder, 3, OrderStatus.IN_PROGRESS);
         System.out.println(order.getStatus());
 
         for (int i = 0; i < MyOrder.size(); i++) {
-            addToList(MyOrder.get(i) + ".jpg", MyOrder.get(i),Mainmenu.getprice(MyOrder.get(i)) , OrderStatus.READY);
+            addToList(MyOrder.get(i) + ".jpg", MyOrder.get(i),Mainmenu.getprice(MyOrder.get(i)) ,order.getStatus());
 
         }
     PendingOrders.add(order);

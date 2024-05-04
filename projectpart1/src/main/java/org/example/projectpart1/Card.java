@@ -89,7 +89,7 @@ public class Card {
         }
 
         rectangle.setEffect(new DropShadow());
-        rectangle.setWidth(110);
+        rectangle.setWidth(120);
         rectangle.setHeight(180);
         return rectangle;
     }
