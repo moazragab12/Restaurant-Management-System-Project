@@ -99,8 +99,8 @@
             </VBox>
          </content>
       </ScrollPane>
-      <TextField fx:id="removalText" layoutX="728.0" layoutY="347.0" onKeyPressed="#ChangeInd" prefHeight="26.0" prefWidth="66.0" />
-      <Label layoutX="841.0" layoutY="344.0" text="Enter no of order you want to remove">
+      <TextField fx:id="removalText" layoutX="727.0" layoutY="341.0" onKeyPressed="#ChangeInd" prefHeight="26.0" prefWidth="66.0" />
+      <Label layoutX="804.0" layoutY="338.0" text="Enter no of order you want to remove">
          <font>
             <Font size="21.0" />
          </font>
