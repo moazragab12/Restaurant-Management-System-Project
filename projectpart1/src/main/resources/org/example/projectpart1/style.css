@@ -1,0 +1,7 @@
+.root {
+    -fx-background-image: url('imgs/SaltaBurger.jpg');
+    -fx-background-size: 800px 470px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right bottom;
+
+}

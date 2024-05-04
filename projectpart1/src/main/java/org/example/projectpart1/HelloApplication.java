@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import projectpart1.Menu;
 
@@ -18,7 +19,10 @@ public class HelloApplication extends Application {
             Parent root = FXMLLoader.load(getClass().getResource("Scene1.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
-//            stage.getIcons().add(new Image(getClass().getResourceAsStream("/org/example/projectpart1/imgs/yugi1.jpg")));
+            stage.getIcons().add(new Image(getClass().getResourceAsStream("/org/example/projectpart1/imgs/restauranticon.jpg")));
+            stage.setTitle("ZAQZOUQA RESTAURANT & Cafe");
+
+
             stage.show();
 
 

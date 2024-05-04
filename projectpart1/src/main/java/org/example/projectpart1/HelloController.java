@@ -14,6 +14,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -293,21 +294,7 @@ public void ScaleroutTopleft()
     private Scene scene;
     private Parent root;
 
-//    public void switchToScene1(ActionEvent event) throws IOException {
-//
-//        root = FXMLLoader.load(getClass().getResource("Scene1.fxml"));
-//
-//        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//        ArrayList<String> list=new ArrayList<>() ;
-//        list.add("Sushi");
-//        list.add("Pizza");
-//        list.add("Burger");
-//
-//        choiceBox.getItems().addAll(list);
-//        scene = new Scene(root);
-//        stage.setScene(scene);
-//        stage.show();
-//    }
+
 
     public void switchToScene2(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));

@@ -84,7 +84,7 @@ TextField removalText;
     public void remove() {
         items = new ArrayList<>();
         int sum=0;
-        if(! PendingOrders.isEmpty()) {
+        if(! PendingOrders.isEmpty() && ind<PendingOrders.size())  {
             ArrayList<String> deleted_order = PendingOrders.get(ind).getOrderedItems();
             for (int i=0;i<ind;i++)
             {

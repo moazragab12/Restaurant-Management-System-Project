@@ -14,20 +14,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.projectpart1.MainController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.projectpart1.MainController">
     <children>
         <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="15.0" layoutY="37.0" pannable="true" prefHeight="206.0" prefWidth="1250.0">
             <content>
                 <HBox fx:id="menu" prefHeight="170.0" prefWidth="1249.0" />
             </content>
         </ScrollPane>
-        <VBox alignment="CENTER" layoutX="499.0" layoutY="302.0" prefHeight="155.0" prefWidth="159.0" spacing="20.0">
+        <VBox alignment="CENTER" layoutX="480.0" layoutY="251.0" prefHeight="155.0" prefWidth="151.0" spacing="20.0">
          <children>
             <ChoiceBox fx:id="choiceBox" onMouseClicked="#addOrder" prefWidth="150.0" />
-            <Button mnemonicParsing="false" onAction="#addCard" text="Add Order" />
             <Button mnemonicParsing="false" onAction="#remove" text="Remove indexed Order " />
          </children></VBox>
-      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="14.0" layoutY="288.0" prefHeight="425.0" prefWidth="454.0">
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="14.0" layoutY="287.0" prefHeight="425.0" prefWidth="454.0">
          <content>
             <VBox prefHeight="512.0" prefWidth="448.0" spacing="10.0">
                <children>
@@ -100,13 +99,13 @@
             </VBox>
          </content>
       </ScrollPane>
-      <TextField fx:id="removalText" layoutX="688.0" layoutY="451.0" onKeyPressed="#ChangeInd" prefHeight="26.0" prefWidth="66.0" />
-      <Label layoutX="682.0" layoutY="413.0" text="Enter no of order you want to remove" textFill="#d91212">
+      <TextField fx:id="removalText" layoutX="728.0" layoutY="347.0" onKeyPressed="#ChangeInd" prefHeight="26.0" prefWidth="66.0" />
+      <Label layoutX="841.0" layoutY="344.0" text="Enter no of order you want to remove">
          <font>
-            <Font size="17.0" />
+            <Font size="21.0" />
          </font>
       </Label>
-      <Label layoutX="154.0" layoutY="244.0" prefHeight="18.0" prefWidth="114.0" text="MENU" textFill="#ae4a4a">
+      <Label layoutX="154.0" layoutY="244.0" prefHeight="18.0" prefWidth="114.0" text="MENU" textFill="#2b0b0b">
          <font>
             <Font size="29.0" />
          </font>
@@ -116,5 +115,6 @@
             <Font size="29.0" />
          </font>
       </Label>
+      <Button layoutX="725.0" layoutY="294.0" mnemonicParsing="false" onAction="#addCard" text="Add Order" />
     </children>
 </AnchorPane>
