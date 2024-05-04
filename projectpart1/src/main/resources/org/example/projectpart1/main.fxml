@@ -110,7 +110,7 @@
             <Font size="29.0" />
          </font>
       </Label>
-      <Label layoutX="296.0" layoutY="-8.0" text="Welcome To ZaqZouqa" textFill="#000f1896">
+      <Label layoutX="491.0" layoutY="-8.0" text="Welcome To ZaqZouqa" textFill="#000f1896">
          <font>
             <Font size="29.0" />
          </font>
