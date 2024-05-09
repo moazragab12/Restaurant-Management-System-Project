@@ -86,7 +86,7 @@ public class Receptionist extends Stuff implements  TableCanReserve{
  { tabLi.set(NoTable-1,"empty");
   }
  public void TableCanReserve(int no_of_people)
- {   flag =0;
+ {  int  flag =0;
  for(int i= 0; i<tabLi.size();i++){
     if(tabLi.get(i).equals("empty"))
     flag++;   

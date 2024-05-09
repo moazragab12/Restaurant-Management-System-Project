@@ -10,12 +10,14 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
+import static org.example.projectpart1.ManagerGui.y;
+
 public class HelloApplication extends Application {
    public static Menu Mainmenu ;
     @Override
     public void start(Stage stage) {
         try {
-           
+
             Parent root = FXMLLoader.load(getClass().getResource("Scene1.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -56,6 +58,43 @@ public class HelloApplication extends Application {
         Mainmenu=new Menu(type_menuitems,menuitems,price_menuitems);
 
         launch();
+        try{
+            if(!"null".equals(y[4]) ){
+                Mainmenu.search(y[4]); }
+            else{
+                System.out.println("Do not search .");
+            }
+
+            if(!"null".equals(y[0]) && !"null".equals(y[1])&& !"null".equals(y[2]))
+            {Mainmenu.additem(y[0], y[1],Double.parseDouble(y[2]));
+                //  menu.displayMenu();
+            }
+            else{
+                System.out.println("Do not add any item.");
+            }
+            if(!"null".equals(y[3]) ){
+                Mainmenu.removeitem(y[3]);
+                //   menu.displayMenu();
+            }else{
+                System.out.println("Do not remove any item.");
+            }
+            if(!"null".equals(y[5]) && !"null".equals(y[6]) )
+            { Mainmenu.changeprice(y[5],Double.parseDouble(y[6]));
+                //  menu.displayMenu();
+            }
+            else{
+                System.out.println("Do not change price.");
+            }
+
+            Mainmenu.displayMenu();
+
+
+        }
+        catch(NumberFormatException ex){
+            System.out.println("Finish");}
+        catch(Exception ex){
+            System.out.println("Finish");
+        }
         System.out.println("EOF");
     }
 }
