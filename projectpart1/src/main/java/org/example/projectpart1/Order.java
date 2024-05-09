@@ -12,8 +12,7 @@ enum Type {
 /**
  * Represents an order made by a customer in a restaurant.
  */
-//public class Order implements Comparable<Order> {
-public class Order {
+public class Order implements Comparable<Order> {
     /**
      * The number of the table where the order is placed.
      */
@@ -141,6 +140,9 @@ public class Order {
      */
     public void create_bill(int customerId, Date date, ArrayList<String> orderedItems) {
         bill = new Bill(customerId, date, orderedItems);
+        bill.setTotalPrice(Menu.menuItems, Menu.priceMenuItems);
+        bill.print_bill(customerId, customerId, bill.get_Total_Price(), date,  OrderStatus.IN_PROGRESS);
+
     }
 
     /**
@@ -175,13 +177,13 @@ public class Order {
      * @param o The order to be compared.
      * @return 0 if the orders have the same ID, 1 if this order's ID is greater, -1 otherwise.
      */
-//    @Override
-//    public int compareTo(Order o) {
-//        if(this.orderId == o.orderId)
-//            return 0;
-//        else if(this.orderId < o.orderId)
-//            return 1;
-//        else
-//            return -1;
-//    }
+    @Override
+    public int compareTo(Order o) {
+        if(this.orderId == o.orderId)
+            return 0;
+        else if(this.orderId < o.orderId)
+            return 1;
+        else
+            return -1;
+    }
 }

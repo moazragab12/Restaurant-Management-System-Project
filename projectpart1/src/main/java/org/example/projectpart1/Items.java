@@ -12,9 +12,9 @@ import java.util.ArrayList;
 
 public abstract class Items implements Comparable<Items> {
        private double price;
-    protected static ArrayList<String>menuitems;
-    protected static ArrayList<Double>price_menuitems;
-    protected static ArrayList<String>type_menuitems;
+    protected static ArrayList<String>menuItems;
+    protected static ArrayList<Double>priceMenuItems;
+    protected static ArrayList<String>typeMenuItems;
 
     public abstract void additem(String type,String item,double price);
     public abstract void removeitem(String item);

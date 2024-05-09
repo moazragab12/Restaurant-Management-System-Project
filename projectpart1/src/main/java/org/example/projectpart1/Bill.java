@@ -15,7 +15,7 @@ import java.util.Date;
 public class Bill {
 
     /** The incremental number assigned to each bill. */
-    static int bill_incremental = 1;
+    static int billIncremental = 1;
 
     /** The unique identifier of the bill. */
     static int billNo;
@@ -43,8 +43,8 @@ public class Bill {
      * Constructs a bill with a pending status and assigns it a unique bill ID.
      */
     public Bill() {
-        billNo = bill_incremental;
-        bill_incremental++;
+        billNo = billIncremental;
+        billIncremental++;
         set_status(OrderStatus.IN_PROGRESS);
     }
 
