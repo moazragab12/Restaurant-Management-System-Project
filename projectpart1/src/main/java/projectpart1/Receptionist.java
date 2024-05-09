@@ -19,6 +19,10 @@ public class Receptionist extends Stuff implements  TableCanReserve{
     }
     public Receptionist(int salary, String roles, int dayoff, int NoTable ) {
         super(salary, roles, dayoff);
+        if(NoTable>25){
+            System.out.println("Invalid Number of Table ,Sir " );
+        }
+        else
         this.tabLi = new ArrayList<>(Collections.nCopies( NoTable, "empty"));
     }
     

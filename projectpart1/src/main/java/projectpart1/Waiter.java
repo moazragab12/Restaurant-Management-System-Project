@@ -29,7 +29,12 @@ public class Waiter extends Stuff {
      * Scanner object for user input.
      */
     Scanner in = new Scanner(System.in);
+    public Waiter() {}
 
+    public Waiter(String name, String address, int contactNumber,int salary, String roles, int dayoff)
+    {
+        super(name, address, contactNumber, salary, roles, dayoff);
+    }
     public static ArrayList<Order> getAll_orders() {
         return All_orders;
     }
@@ -119,7 +124,7 @@ public class Waiter extends Stuff {
         int n = in.nextInt();
         int m = in.nextInt();
         Date date = new Date();
-        orders.get(n).create_bill(m, date, orders.get(n).getOrderedItems());
+        orders.get(n-1).create_bill(m, date, orders.get(n-1).getOrderedItems());
     }
 
     /**

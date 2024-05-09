@@ -42,15 +42,13 @@ public class ManagerGui implements Initializable {
 
 
 
-    //y[]="null";
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
 
         for (int i = 0; i < y.length; i++) {
             y[i]="null"; // Prints "null"
         }
-        
+
          Menu menu =Mainmenu;
 
 
@@ -176,7 +174,6 @@ public class ManagerGui implements Initializable {
         catch(Exception ex){
             System.out.println("Finish");
         }
-        //main(args);
 
     }
 

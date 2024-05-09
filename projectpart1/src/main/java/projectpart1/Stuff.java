@@ -28,6 +28,15 @@ public class Stuff extends Person {
        ID=count;
         count++;
     }
+
+    public Stuff(String name, String address, int contactNumber,int salary, String roles, int dayoff) {
+        super(name, address, contactNumber);
+        this.salary = salary;
+        this.roles = roles;
+        this.dayoff = dayoff;
+        ID=count;
+        count++;
+    }
     
     
     //getter and setter

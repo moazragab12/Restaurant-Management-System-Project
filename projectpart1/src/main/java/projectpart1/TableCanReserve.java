@@ -9,6 +9,7 @@ package projectpart1;
  * @author dell
  */
 public interface TableCanReserve {
+   static final  int maxNoOfTables = 25;
   void  TableCanReserve(int no_of_people) ;
    
 }

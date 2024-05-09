@@ -99,8 +99,10 @@ public class Bill {
      * @param status The status of the bill.
      */
     public void print_bill(int billNo, int customerId, Double totalPrice, Date date, OrderStatus status) {
-        System.out.println("Bill No: " + billNo + "Customer ID: " + customerId + "Total Price: " + totalPrice + "Date: " + date
-                + "Status: " + status);
+        pay(billNo);
+        System.out.println( "Customer ID: " + customerId + " Total Price: " + totalPrice + " Date: " + date
+                + " Status: " + status);
+        System.out.println("Bill No: " + billNo + " is paid successfully.");
     }
 
     /**

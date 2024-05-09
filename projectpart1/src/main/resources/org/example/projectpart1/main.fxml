@@ -116,6 +116,6 @@
          </font>
       </Label>
       <Button layoutX="725.0" layoutY="294.0" mnemonicParsing="false" onAction="#addCard" text="Add Order" />
-      <Button layoutX="556.0" layoutY="622.0" mnemonicParsing="false" onAction="#ChangeManager" text="Button" />
+      <Button layoutX="14.0" layoutY="1.0" mnemonicParsing="false" onAction="#ChangeManager" text="Change to Manager Mode" />
     </children>
 </AnchorPane>
