@@ -114,7 +114,7 @@ public class Waiter extends Stuff {
     /**
      * Allows the waiter to add a bill to an existing order.
      */
-    public void addbill() {
+    public void payBill() {
         System.out.println("Enter the order number you want to add bill to and its customer id");
         int n = in.nextInt();
         int m = in.nextInt();

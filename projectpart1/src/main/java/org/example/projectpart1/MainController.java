@@ -84,22 +84,31 @@ TextField removalText;
     public void remove() {
         items = new ArrayList<>();
         int sum=0;
-        if(! PendingOrders.isEmpty() && ind<PendingOrders.size())  {
-            ArrayList<String> deleted_order = PendingOrders.get(ind).getOrderedItems();
-            for (int i=0;i<ind;i++)
-            {
-              sum+=   PendingOrders.get(i).getOrderedItems().size();
-            }
-            int size = deleted_order.size();
-            for (int i = sum; i < sum+size; i++) {
-                items.add(i);
+
+            if (!PendingOrders.isEmpty()) {
+                try {
+                    ArrayList<String> deleted_order = PendingOrders.get(ind).getOrderedItems();
+                    for (int i = 0; i < ind; i++) {
+                        sum += PendingOrders.get(i).getOrderedItems().size();
+                    }
+                    int size = deleted_order.size();
+                    for (int i = sum; i < sum + size; i++) {
+                        items.add(i);
+
+                    }
+                    items = items.reversed();
+                    removeList(items);
+                    PendingOrders.remove(ind);
+                }
+        catch (Exception e){
+            System.out.println("No order to remove");
+       }
 
             }
-            items = items.reversed();
-            removeList(items);
 
-            PendingOrders.remove(ind);
-        }
+
+
+
     }
 
 
