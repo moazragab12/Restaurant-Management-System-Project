@@ -11,7 +11,6 @@ public class Receptionist extends Stuff implements  TableCanReserve{
      ArrayList<String> tabLi;
         
     private int tableId ;
-      int flag=0;
     
   // tab.setTab_status(tabLi);
     public Receptionist(int NoTable) {
