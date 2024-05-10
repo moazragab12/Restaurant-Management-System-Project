@@ -7,6 +7,11 @@ package projectpart1;
 /**
  * @author dell
  */
+
+/**
+ *
+ * Represents a restaurant in the system.
+ */
 public class Resturant {
 
     private String name;

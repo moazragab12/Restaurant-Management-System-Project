@@ -24,6 +24,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+/**
+ * Controller class for the Animation GUI of the restaurant management system.
+ */
 public class HelloController implements Initializable {
     @FXML
     private ImageView Firstimg;

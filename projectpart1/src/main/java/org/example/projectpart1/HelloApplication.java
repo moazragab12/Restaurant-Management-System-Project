@@ -6,6 +6,17 @@
 /***************Moaz Ragab ,Bassant samy,Yousef Osama, Alaa Atef, Esraa Atef********************/
 /***********************************Date: 25 April 2024******************************************/
 
+/**
+ * This package contains classes related to Console Testing and GUI.
+ * <p>
+ * It includes the main class of the restaurant management system and other supporting classes.
+ * </p>
+ * <p>
+ * Team number: 16
+ * Team Members: Moaz Ragab, Bassant Samy, Yousef Osama, Alaa Atef, Esraa Atef
+ * Date: 25 April 2024
+ * </p>
+ */
 package org.example.projectpart1;
 
 import javafx.application.Application;
@@ -24,7 +35,9 @@ import java.util.Scanner;
 
 import static org.example.projectpart1.ManagerGui.y;
 import static org.example.projectpart1.Menu.priceMenuItems;
-
+/**
+ * The main class of the restaurant management system.
+ */
 public class HelloApplication extends Application {
     public static Menu Mainmenu;
 

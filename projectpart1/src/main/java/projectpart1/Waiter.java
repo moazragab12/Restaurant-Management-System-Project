@@ -153,7 +153,7 @@ public class Waiter extends Stuff implements Employee {
      * Adds a bonus to the salary of the employee.
      *
      * @param salary The current salary of the employee to which the bonus will be added.
-     * @return void
+     *
      */
     @Override
     public void addBonus(int salary) {

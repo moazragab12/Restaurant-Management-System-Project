@@ -26,9 +26,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import static com.sun.tools.javac.util.LayoutCharacters.CR;
 import static org.example.projectpart1.HelloApplication.Mainmenu;
 
+/**
+ * Controller class for the main GUI of the restaurant management system.
+ */
 public class MainController implements Initializable {
     @FXML
     private HBox menu;
