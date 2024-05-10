@@ -27,8 +27,8 @@ To run the Restaurant Management System, you need Java installed on your system.
 ```bash 
 git clone https://github.com/moazragab12/Restaurant-Management-System-Project.git
 cd Restaurant-Management-System-Project.git
-javac *.java
 ```
+then you can compile files easily 
 ## Documentation
 For more clarifacation about classes and methods, please open [Documentation](./Documentation/index.html) file after installation of Documentation Folder.
 ## Team
