@@ -12,21 +12,20 @@ public class Person {
     public Person() {}
 
     public Person(String name, int contactNumber) {
-        boolean flag =true;
         ////////////////////*Checking the Name*///////////////////////
-        for(int counter=0;counter<name.length();counter++){
-            if (((int) name.charAt(counter)>= 97 && (int) name.charAt(counter)<= 122) ||
-                    ((int) name.charAt(counter)>= 65 && (int) name.charAt(counter)<= 90)  ||
-                    (int) name.charAt(counter)== 32) {
+        try{
+            for(int counter=0;counter<name.length();counter++){
+                if (((int) name.charAt(counter)>= 97 && (int) name.charAt(counter)<= 122) ||
+                        ((int) name.charAt(counter)>= 65 && (int) name.charAt(counter)<= 90)  ||
+                        (int) name.charAt(counter)== 32) {
+                }
+                else {
+                    throw new InvalidNameException();
+                }
             }
-            else {
-                flag =false;
-                break;
-            }
+        }catch(InvalidNameException e){
+            System.out.println(e);
         }
-        if(flag) this.name = name;
-        else if (!flag) System.out.println("Invalid Name, Please Try Again");
-
     }
 
     public Person(String name, String address, int contactNumber) {
