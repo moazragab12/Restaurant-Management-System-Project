@@ -30,7 +30,7 @@ cd Restaurant-Management-System-Project.git
 javac *.java
 ```
 ## Documentation
-For more clarifacation about classes and methods, please go to [Documentation](./Documentation/index.html) after installation of Documentation Folder.
+For more clarifacation about classes and methods, please open [Documentation](./Documentation/index.html) file after installation of Documentation Folder.
 ## Team
 For information about the team members, please refer to the [Team section](./TeamMembers) in the project.
 
