@@ -45,7 +45,7 @@ public class HelloApplication extends Application {
 
        Items []item = new Items[2];
        item[0] = new Menu();
-      item[1] = new Chair();
+      item[1] = new Drink(60.0,"V7");
         priceMenuItems.add(33.33);
        priceMenuItems.add(5.33);
       priceMenuItems.add(20.5);

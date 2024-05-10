@@ -37,19 +37,20 @@ public class MainController implements Initializable {
     private List<Text> orders;
 
     ArrayList<String> MyOrder;
-    ArrayList <Order> PendingOrders;
+    ArrayList<Order> PendingOrders;
     int ind;
     Boolean flag = true;
     @FXML
     public ChoiceBox<String> choiceBox;
     private static final String DEFAULT = "Choose";
     ObservableList<String> observableList;
-@FXML
-TextField removalText;
+    @FXML
+    TextField removalText;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ind=0;
-        PendingOrders= Waiter.getAll_orders();
+        ind = 0;
+        PendingOrders = Waiter.getAll_orders();
         MyOrder = new ArrayList<>();
         ArrayList<String> list = Mainmenu.getMenuitems();
         observableList = FXCollections.observableArrayList(list);
@@ -70,6 +71,7 @@ TextField removalText;
 
 
     }
+
     public void addCard() {
         if (!choiceBox.getValue().equals(DEFAULT)) {
 
@@ -82,57 +84,54 @@ TextField removalText;
         System.out.println(order.getStatus());
 
         for (int i = 0; i < MyOrder.size(); i++) {
-            addToList(MyOrder.get(i) + ".jpg", MyOrder.get(i),Mainmenu.getprice(MyOrder.get(i)) ,order.getStatus());
+            addToList(MyOrder.get(i) + ".jpg", MyOrder.get(i), Mainmenu.getprice(MyOrder.get(i)), order.getStatus());
 
         }
-    PendingOrders.add(order);
-        MyOrder=new ArrayList<>();
+        PendingOrders.add(order);
+        MyOrder = new ArrayList<>();
     }
 
     public void remove() {
         items = new ArrayList<>();
-        int sum=0;
+        int sum = 0;
 
-            if (!PendingOrders.isEmpty()) {
-                try {
-                    ArrayList<String> deleted_order = PendingOrders.get(ind).getOrderedItems();
-                    for (int i = 0; i < ind; i++) {
-                        sum += PendingOrders.get(i).getOrderedItems().size();
-                    }
-                    int size = deleted_order.size();
-                    for (int i = sum; i < sum + size; i++) {
-                        items.add(i);
-
-                    }
-                    items = items.reversed();
-                    removeList(items);
-                    PendingOrders.remove(ind);
+        if (!PendingOrders.isEmpty()) {
+            try {
+                ArrayList<String> deleted_order = PendingOrders.get(ind).getOrderedItems();
+                for (int i = 0; i < ind; i++) {
+                    sum += PendingOrders.get(i).getOrderedItems().size();
                 }
-        catch (Exception e){
-            // Create a new alert
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                int size = deleted_order.size();
+                for (int i = sum; i < sum + size; i++) {
+                    items.add(i);
 
-            // Set the title and header text of the alert
-            alert.setTitle("Notice which Order is yours !");
-            alert.setHeaderText("This is an Wrong use of our utilites,Sir !");
+                }
+                items = items.reversed();
+                removeList(items);
+                PendingOrders.remove(ind);
+            }
+            catch (Exception e) {
+                // Create a new alert
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
-            // Set the content text of the alert
-            alert.setContentText("There is No order to remove");
+                // Set the title and header text of the alert
+                alert.setTitle("Notice which Order is yours !");
+                alert.setHeaderText("This is an Wrong use of our utilites,Sir !");
 
-            // Display the alert dialog
-            alert.showAndWait();
-       }
+                // Set the content text of the alert
+                alert.setContentText("There is No order to remove");
 
+                // Display the alert dialog
+                alert.showAndWait();
             }
 
-
+        }
 
 
     }
 
 
     private void removeList(List<Integer> items) {
-
 
 
         List<Pane> cards = new ArrayList<>();
@@ -151,16 +150,18 @@ TextField removalText;
 
     public void ChangeInd(KeyEvent keyEvent) {
 
-        if (keyEvent.getCode().equals(KeyCode.ENTER))
-        {String s=removalText.getText();
-            System.out.println("ind is "+s  )  ;
-            ind=Integer.parseInt(s);
+        if (keyEvent.getCode().equals(KeyCode.ENTER)) {
+            String s = removalText.getText();
+            System.out.println("ind is " + s);
+            ind = Integer.parseInt(s);
             removalText.clear();
         }
     }
+
     private Stage stage;
     private Scene scene;
     private Parent root;
+
     public void ChangeManager(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Manager.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

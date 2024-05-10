@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.application.Application;
+
 import static javafx.application.Application.launch;
 import static org.example.projectpart1.HelloApplication.Mainmenu;
 
@@ -32,25 +33,20 @@ import javafx.stage.Stage;
  */
 
 
-
-
 public class ManagerGui implements Initializable {
-
 
 
     public static String[] y = new String[7];
 
 
-
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle){
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
         for (int i = 0; i < y.length; i++) {
-            y[i]="null"; // Prints "null"
+            y[i] = "null"; // Prints "null"
         }
 
-         Menu menu =Mainmenu;
-
+        Menu menu = Mainmenu;
 
 
         GridPane pane = new GridPane();
@@ -61,10 +57,11 @@ public class ManagerGui implements Initializable {
         //  pane.setStyle("-fx-border-color: black;-fx-background-color:  Burlywood;");
         Text text = new Text(50, 70, "Welcome to Zaqouqa");
         text.setFill(Color.BLACK);
-        text.setFont(Font.font("Courier", FontWeight.BOLD,  FontPosture.ITALIC, 25));
+        text.setFont(Font.font("Courier", FontWeight.BOLD, FontPosture.ITALIC, 25));
         text.setOnMouseDragged(e -> {
             text.setX(e.getX());
-            text.setY(e.getY());});
+            text.setY(e.getY());
+        });
         TextField type = new TextField();
         TextField item = new TextField();
         TextField price = new TextField();
@@ -99,69 +96,67 @@ public class ManagerGui implements Initializable {
 
         btcha.setOnAction((ActionEvent e) -> {
             System.out.println(Change_price.getText());
-            y[5]= item_Change_price.getText();
-            y[6]= Change_price.getText();
+            y[5] = item_Change_price.getText();
+            y[6] = Change_price.getText();
         });
 
         btNew.setOnAction((ActionEvent e) -> {
-            System.out.println("type add : "+type.getText()+" item add : "+item.getText()+" price ; "+Double.valueOf(price.getText()));
+            System.out.println("type add : " + type.getText() + " item add : " + item.getText() + " price ; " + Double.valueOf(price.getText()));
             //menu.additem(type.getText(),item.getText(),Double.parseDouble(price.getText()) );
-            y[0]= type.getText();
-            y[1]= item.getText();
-            y[2]= price.getText();
+            y[0] = type.getText();
+            y[1] = item.getText();
+            y[2] = price.getText();
         });
 
         btrem.setOnAction((ActionEvent e) -> {
-            System.out.println("item remove: "+remove_item.getText());
-            y[3]= remove_item.getText();
+            System.out.println("item remove: " + remove_item.getText());
+            y[3] = remove_item.getText();
         });
 
 
         btsea.setOnAction((ActionEvent e) -> {
-            System.out.println("Search : "+Search_item.getText());
+            System.out.println("Search : " + Search_item.getText());
             //menu.additem(type.getText(),item.getText(),Double.parseDouble(price.getText()));
-            y[4]= Search_item.getText();
+            y[4] = Search_item.getText();
         });
         btNew.setStyle("-fx-border-color: black;-fx-background-color:  Burlywood;");
         btrem.setStyle("-fx-border-color: black;-fx-background-color:  Burlywood;");
         btsea.setStyle("-fx-border-color: black;-fx-background-color:  Burlywood;");
         btcha.setStyle("-fx-border-color: black;-fx-background-color:  Burlywood;");
         pane.setStyle("-fx-border-color: black;-fx-background-color:   LIGHTYELLOW;");
-        pane.add(text ,4,0 );
-        pane.add(btNew,5, 7);
-        pane.add(btrem,5, 8);
-        pane.add(btsea,5, 3);
-        pane.add(btcha,5, 10);
+        pane.add(text, 4, 0);
+        pane.add(btNew, 5, 7);
+        pane.add(btrem, 5, 8);
+        pane.add(btsea, 5, 3);
+        pane.add(btcha, 5, 10);
         Scene scene = new Scene(pane, 700, 600);
         Stage primaryStage = new Stage(); // Create a stage
         primaryStage.setTitle("Zaqouqa"); // Set title
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.show(); // Display the stage
-        try{
-            if(!"null".equals(y[4]) ){
-                menu.search(y[4]); }
-            else{
+        try {
+            if (!"null".equals(y[4])) {
+                menu.search(y[4]);
+            } else {
                 System.out.println("Do not search .");
             }
 
-            if(!"null".equals(y[0]) && !"null".equals(y[1])&& !"null".equals(y[2]))
-            {menu.additem(y[0], y[1],Double.parseDouble(y[2]));
+            if (!"null".equals(y[0]) && !"null".equals(y[1]) && !"null".equals(y[2])) {
+                menu.additem(y[0], y[1], Double.parseDouble(y[2]));
                 //  menu.displayMenu();
-            }
-            else{
+            } else {
                 System.out.println("Do not add any item.");
             }
-            if(!"null".equals(y[3]) ){
+            if (!"null".equals(y[3])) {
                 menu.removeitem(y[3]);
                 //   menu.displayMenu();
-            }else{
+            } else {
                 System.out.println("Do not remove any item.");
             }
-            if(!"null".equals(y[5]) && !"null".equals(y[6]) )
-            { menu.changeprice(y[5],Double.parseDouble(y[6]));
+            if (!"null".equals(y[5]) && !"null".equals(y[6])) {
+                menu.changeprice(y[5], Double.parseDouble(y[6]));
                 //  menu.displayMenu();
-            }
-            else{
+            } else {
                 System.out.println("Do not change price.");
             }
 
@@ -169,15 +164,15 @@ public class ManagerGui implements Initializable {
 
 
         }
-        catch(NumberFormatException ex){
-            System.out.println("Finish");}
-        catch(Exception ex){
+        catch (NumberFormatException ex) {
+            System.out.println("Finish");
+        }
+        catch (Exception ex) {
             System.out.println("Finish");
         }
 
     }
 
 
-
-    }
+}
 
