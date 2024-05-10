@@ -6,7 +6,7 @@ import org.example.projectpart1.Menu;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Manager extends Stuff {
+public class Manager extends Stuff implements Employee {
     private  ArrayList<Integer> excellentCount = new ArrayList<>();
     private  ArrayList<Integer> goodCount = new ArrayList<>();
     private  ArrayList<Integer> badCount = new ArrayList<>();
@@ -90,5 +90,15 @@ public class Manager extends Stuff {
     public static void  changePrice (ArrayList<String> menuitems, ArrayList<Double> price_menuitems, String item, double new_price)
     { Menu menu = new Menu();
         menu.changeprice( item, new_price);
+    }
+
+    @Override
+    public void addBonus(int salary) {
+        this.setSalary(1000+getSalary());
+    }
+
+    @Override
+    public int getWorkingTime() {
+        return 12;
     }
 }

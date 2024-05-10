@@ -12,7 +12,7 @@ import java.util.Scanner;
 /**
  * Represents a waiter in a restaurant, inheriting from the Stuff class.
  */
-public class Waiter extends Stuff {
+public class Waiter extends Stuff implements Employee {
 
 
     /**
@@ -134,5 +134,15 @@ public class Waiter extends Stuff {
         System.out.println("Enter the order number you want to delete bill from");
         int n = in.nextInt();
         orders.get(n).setBill(null);
+    }
+
+    @Override
+    public void addBonus(int salary) {
+        this.setSalary(500+getSalary());
+    }
+
+    @Override
+    public int getWorkingTime() {
+        return 8;
     }
 }

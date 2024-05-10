@@ -2,12 +2,12 @@ package projectpart1;
 
 import org.example.projectpart1.Menu;
 
-public class Cheff extends Person {
+public class Cheff extends Stuff implements Employee {
     private Menu menu;
 
-    public Cheff(String name, String address, int contactNumber)
+    public Cheff(String name, String address, int contactNumber,int salary, String roles, int dayoff)
     {
-        super(name, address, contactNumber);
+        super(name, address, contactNumber, salary, roles, dayoff);
         this.menu=new Menu();
     }
 
@@ -24,6 +24,16 @@ public class Cheff extends Person {
     public void viewOrders ()
     {
         Waiter.view_all_orders();
+    }
+
+    @Override
+    public void addBonus(int salary) {
+        this.setSalary(750+getSalary());
+    }
+
+    @Override
+    public int getWorkingTime() {
+        return 10;
     }
 }
 
