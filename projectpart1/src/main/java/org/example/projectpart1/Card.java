@@ -12,6 +12,11 @@ import javafx.scene.text.Text;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.effect.DropShadow;
+/**
+ *
+ * @author Moaz
+ */
+
 
 /**
  * Represents a card used in the application.

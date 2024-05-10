@@ -216,4 +216,27 @@ public class Menu extends Items implements Comparable<Items> {
         return tempPrice.get(tempPrice.size() - 1);
 
     }
+    public void setMenuitems(ArrayList<String> menuitems) {
+        this.menuItems = menuitems;
+    }
+
+
+    //    setter and getter price_menuitems
+    public static ArrayList<Double> getPrice_menuitems() {
+        return priceMenuItems;
+    }
+    public void setPrice_menuitems(ArrayList<Double> price_menuitems) {
+        this.priceMenuItems = price_menuitems;
+    }
+
+
+    //    setter and getter type_menuitems
+    public static ArrayList<String> getType_menuitems() {
+        return typeMenuItems;
+    }
+
+    public void setType_menuitems(ArrayList<String> type_menuitems) {
+        this.typeMenuItems = type_menuitems;
+    }
+
 }
