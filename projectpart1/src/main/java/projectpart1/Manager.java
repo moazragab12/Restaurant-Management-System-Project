@@ -87,8 +87,8 @@ public class Manager extends Stuff {
         stuff.remove(ID-1);
     }
 
-    public void changePrice (ArrayList<String> menuitems, ArrayList<Double> price_menuitems, String item, double new_price)
-    {
-        Menu.changeprice( item, new_price);
+    public static void  changePrice (ArrayList<String> menuitems, ArrayList<Double> price_menuitems, String item, double new_price)
+    { Menu menu = new Menu();
+        menu.changeprice( item, new_price);
     }
 }

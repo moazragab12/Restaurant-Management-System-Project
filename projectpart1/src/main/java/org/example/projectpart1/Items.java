@@ -12,25 +12,24 @@ import java.util.ArrayList;
 
 public abstract class Items implements Comparable<Items> {
        private double price;
-    protected static ArrayList<String>menuItems;
-    protected static ArrayList<Double>priceMenuItems;
-    protected static ArrayList<String>typeMenuItems;
 
     public abstract void additem(String type,String item,double price);
     public abstract void removeitem(String item);
-    //public abstract  void changeprice(String item, double new_price);
-    public abstract double getprice (String item);
+    public abstract  void changeprice(String item, double new_price);
     public abstract void search (String item);
-    public  double getprice(){
+    public  final double getprice(){
         return price;
+    }
+    public void setprice(double price){
+        this.price=price;
     }
     @Override
     public int compareTo(Items item){
 
-        if(this.price>item.price){
+        if(this.getprice()>item.getprice()){
             return 1;
         }
-        else if(this.price<item.price){
+        else if(this.getprice()<item.getprice()){
             return -1;
         }
         else{
@@ -38,6 +37,7 @@ public abstract class Items implements Comparable<Items> {
         }
     }
 
+    public abstract Double getHeighestPrice(Items items);
 }
 
 

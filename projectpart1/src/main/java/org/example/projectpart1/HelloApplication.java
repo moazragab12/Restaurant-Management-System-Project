@@ -8,9 +8,12 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static org.example.projectpart1.ManagerGui.y;
+import static org.example.projectpart1.Menu.priceMenuItems;
 
 public class HelloApplication extends Application {
    public static Menu Mainmenu ;
@@ -38,6 +41,22 @@ public class HelloApplication extends Application {
         System.out.println("Start of file");
 
         /******************TEST PROGRAM ******************************************/
+       Items []item = new Items[2];
+       item[0] = new Menu();
+       item[1] = new Chair();
+        priceMenuItems.add(33.33);
+        priceMenuItems.add(5.33);
+        priceMenuItems.add(20.5);
+        priceMenuItems.add(284.5);
+        priceMenuItems.add(33.33);
+        item[0].getHeighestPrice((Menu)item[0]);
+        Arrays.sort(item);
+      for(int i=0;i<2;i++)
+      {
+          System.out.println(item[i].getprice());
+
+      }
+
         /*
          we will show some features of the program by creating some objects and calling some methods
           Showing  Polymorphism by creating objects of the parent class and the child class
