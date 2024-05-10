@@ -81,29 +81,29 @@
 //
 //      /*........................Exception_Handling....................*/
 //
-////    boolean check =true;
-////    Scanner scanner= new Scanner (System.in);
-////    System.out.println("Enter type of new item in menu");
-////    String type=scanner.next();
-////    System.out.println("Enter name of new item in menu");
-////    String Name=scanner.next();
-////
-////     do{
-////    try{
-////    System.out.println("Enter Number");
-////    float price= scanner.nextFloat();
-////    //System.out.println(price);
-////    item.additem(type, Name,price);
-////    check=false;
-////    }
-////    catch(java.util.InputMismatchException ex){
-////    System.out.println("Incorrect , Try again ");
-////    scanner.nextLine();
-////
-////    } }while(check);
-////
-////
-////      item.displayMenu();
+//    boolean check =true;
+//    Scanner scanner= new Scanner (System.in);
+//    System.out.println("Enter type of new item in menu");
+//    String type=scanner.next();
+//    System.out.println("Enter name of new item in menu");
+//    String Name=scanner.next();
+//
+//     do{
+//    try{
+//    System.out.println("Enter Number");
+//    float price= scanner.nextFloat();
+//    //System.out.println(price);
+//    item.additem(type, Name,price);
+//    check=false;
+//    }
+//    catch(java.util.InputMismatchException ex){
+//    System.out.println("Incorrect , Try again ");
+//    scanner.nextLine();
+//
+//    } }while(check);
+//
+//
+//      item.displayMenu();
 ///*........................end..................*/
 //
 //
