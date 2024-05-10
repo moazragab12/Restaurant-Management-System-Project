@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import projectpart1.*;
 
 
 import java.lang.reflect.Array;
@@ -79,28 +80,28 @@ public class HelloApplication extends Application {
 
 
 /********************GUI INFO ******************************************/
-       Menu menu = new Menu();
-     ArrayList<String> type_menuitems = new ArrayList<>();
-     ArrayList<String> menuitems = new ArrayList<>();
-     ArrayList<Double> price_menuitems = new ArrayList<>();
-     type_menuitems.add("Syrianmeal");
-     type_menuitems.add("Koreanmeal");
-     type_menuitems.add("Egyptianmeal");
-     type_menuitems.add("Americanmeal");
-     type_menuitems.add("Japanesemeal");
-     menuitems.add("Shawarma");
-     menuitems.add("Tahini");
-     menuitems.add("Koshari");
-     menuitems.add("Burger");
-     menuitems.add("Sushi");
-     price_menuitems.add(33.33);
-     price_menuitems.add(5.33);
-     price_menuitems.add(20.5);
-     price_menuitems.add(33.33);
-     price_menuitems.add(43.5);
-     menu.setType_menuitems(type_menuitems);
-     menu.setPrice_menuitems(price_menuitems);
-     menu.setMenuitems(menuitems);
+//       Menu menu = new Menu();
+//     ArrayList<String> type_menuitems = new ArrayList<>();
+//     ArrayList<String> menuitems = new ArrayList<>();
+//     ArrayList<Double> price_menuitems = new ArrayList<>();
+//     type_menuitems.add("Syrianmeal");
+//     type_menuitems.add("Koreanmeal");
+//     type_menuitems.add("Egyptianmeal");
+//     type_menuitems.add("Americanmeal");
+//     type_menuitems.add("Japanesemeal");
+//     menuitems.add("Shawarma");
+//     menuitems.add("Tahini");
+//     menuitems.add("Koshari");
+//     menuitems.add("Burger");
+//     menuitems.add("Sushi");
+//     price_menuitems.add(33.33);
+//     price_menuitems.add(5.33);
+//     price_menuitems.add(20.5);
+//     price_menuitems.add(33.33);
+//     price_menuitems.add(43.5);
+//     menu.setType_menuitems(type_menuitems);
+//     menu.setPrice_menuitems(price_menuitems);
+//     menu.setMenuitems(menuitems);
   /****************************Start of GUI ******************************************/
         launch();
         try{

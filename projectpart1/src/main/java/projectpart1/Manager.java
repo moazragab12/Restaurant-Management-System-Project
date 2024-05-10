@@ -24,6 +24,16 @@ public class Manager extends Stuff implements Employee {
             badCount.add(0);
         }
     }
+    public Manager(ArrayList<Stuff> stuff,String name, String address, int contactNumber)
+    {
+        this.stuff=stuff;
+        for(int i=0;i<stuff.size();i++)
+        {
+            excellentCount.add(0);
+            goodCount.add(0);
+            badCount.add(0);
+        }
+    }
     public void customerFeedback ()
     {
         System.out.println("Enter the ID of the employee");
@@ -91,7 +101,20 @@ public class Manager extends Stuff implements Employee {
     { Menu menu = new Menu();
         menu.changeprice( item, new_price);
     }
-
+    public void printEmplooys ()
+    {
+        System.out.println("Your Stuff are: ");
+        for (Stuff element : stuff ) {
+            System.out.println("name: "+element.getName());
+            System.out.println("address: "+element.getAddress());
+            System.out.println("contact number: "+element.getContactNumber());
+            System.out.println("salary: "+element.getSalary());
+            System.out.println("roles: "+element.getRoles());
+            System.out.println("ID: "+element.getID());
+            System.out.println("dayoffno: "+element.getDayoff());
+            System.out.println("///////////////////////////////////////////////////////////");
+        }
+    }
     @Override
     public void addBonus(int salary) {
         this.setSalary(1000+getSalary());

@@ -16,6 +16,12 @@ public class Customer {
         this.scanner = new Scanner(System.in);
     }
 
+    public void cancelRes(Receptionist receptionist)
+    {
+        System.out.println("Enter your table number: ");
+        int tableNo = scanner.nextInt();
+        receptionist.removeReserve(tableNo);
+    }
     public void placeOrder(Waiter waiter) {
         waiter.make_order();
     }
