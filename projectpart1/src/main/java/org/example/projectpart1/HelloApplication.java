@@ -37,6 +37,25 @@ public class HelloApplication extends Application {
     public static void main(String[] args) {
         System.out.println("Start of file");
 
+        /******************TEST PROGRAM ******************************************/
+        /*
+         we will show some features of the program by creating some objects and calling some methods
+          Showing  Polymorphism by creating objects of the parent class and the child class
+          Showing  Inheritance by creating objects of the parent class and the child class
+          Showing  Encapsulation by creating private variables and using setter and getter methods
+          Showing  Abstraction by creating abstract methods and classes
+          Showing  Interface by implementing an interface to  reduce reduntant code
+          Showing  Exception Handling by using try and catch blocks
+         */
+
+
+
+
+
+
+
+
+/********************GUI INFO ******************************************/
         ArrayList<String> type_menuitems = new ArrayList<>();
         ArrayList<String> menuitems = new ArrayList<>();
         ArrayList<Double> price_menuitems = new ArrayList<>();
@@ -56,7 +75,7 @@ public class HelloApplication extends Application {
         price_menuitems.add(33.33);
         price_menuitems.add(43.5);
         Mainmenu=new Menu(type_menuitems,menuitems,price_menuitems);
-
+  /****************************Start of GUI ******************************************/
         launch();
         try{
             if(!"null".equals(y[4]) ){
