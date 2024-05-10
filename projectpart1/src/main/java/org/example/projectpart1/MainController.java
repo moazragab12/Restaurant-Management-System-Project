@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
@@ -108,7 +109,18 @@ TextField removalText;
                     PendingOrders.remove(ind);
                 }
         catch (Exception e){
-            System.out.println("No order to remove");
+            // Create a new alert
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+            // Set the title and header text of the alert
+            alert.setTitle("Notice which Order is yours !");
+            alert.setHeaderText("This is an Wrong use of our utilites,Sir !");
+
+            // Set the content text of the alert
+            alert.setContentText("There is No order to remove");
+
+            // Display the alert dialog
+            alert.showAndWait();
        }
 
             }
