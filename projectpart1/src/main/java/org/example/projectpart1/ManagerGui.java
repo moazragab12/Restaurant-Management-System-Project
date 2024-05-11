@@ -55,7 +55,7 @@ public class ManagerGui implements Initializable {
         pane.setHgap(5.5);
         pane.setVgap(5.5);
         //  pane.setStyle("-fx-border-color: black;-fx-background-color:  Burlywood;");
-        Text text = new Text(50, 70, "Welcome to Zaqouqa");
+        Text text = new Text(50, 70, "Welcome to ZaqZouqa");
         text.setFill(Color.BLACK);
         text.setFont(Font.font("Courier", FontWeight.BOLD, FontPosture.ITALIC, 25));
         text.setOnMouseDragged(e -> {

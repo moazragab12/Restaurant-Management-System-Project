@@ -35,13 +35,11 @@ public class MainController implements Initializable {
     @FXML
     private HBox menu;
     private List<Integer> items;
-    private List<String> items2;
     private List<Text> orders;
 
     ArrayList<String> MyOrder;
     ArrayList<Order> PendingOrders;
     int ind;
-    Boolean flag = true;
     @FXML
     public ChoiceBox<String> choiceBox;
     private static final String DEFAULT = "Choose";
@@ -166,9 +164,9 @@ public class MainController implements Initializable {
 
     public void ChangeManager(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Manager.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
+       stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        scene = new Scene(root);
+//        stage.setScene(scene);
         stage.close();
 
     }
