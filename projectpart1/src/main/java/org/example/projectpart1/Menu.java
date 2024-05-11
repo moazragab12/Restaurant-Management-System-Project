@@ -31,8 +31,8 @@ public class Menu extends Items implements Comparable<Items> {
      * @param priceMenuItems The prices of menu items.
      */
     public Menu(ArrayList<String> typeMenuItems, ArrayList<String> menuItems, ArrayList<Double> priceMenuItems) {
-        this.setmenuItems(menuItems);
-        this.setprice_menuItems(priceMenuItems);
+        this.setMenuitems(menuItems);
+        this.setPrice_menuitems(priceMenuItems);
         this.setType_menuItems(typeMenuItems);
     }
 
@@ -46,9 +46,6 @@ public class Menu extends Items implements Comparable<Items> {
         return menuItems;
     }
 
-    private void setmenuItems(ArrayList<String> menuItems) {
-        this.menuItems = menuItems;
-    }
 
 
     /**
@@ -60,9 +57,6 @@ public class Menu extends Items implements Comparable<Items> {
         return priceMenuItems;
     }
 
-    private void setprice_menuItems(ArrayList<Double> priceMenuItems) {
-        this.priceMenuItems = priceMenuItems;
-    }
 
 
     /**
