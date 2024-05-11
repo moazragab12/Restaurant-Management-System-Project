@@ -103,81 +103,81 @@ public class HelloApplication extends Application {
           Showing  Exception Handling by using try and catch blocks
          */
 
-//        //                              testing mannager                               //
-//        Cheff cheff = new Cheff("Adel", "cairo", 1552648, 7000, "Chef", 2);
-//        Receptionist receptionist = new Receptionist("Hany", "Cairo", 1235255, 7000, "recieptionist", 2, 10);
-//        ArrayList<Stuff> stuff = new ArrayList<>();
-//        Waiter waiter1 = new Waiter("Ahmed", "cairo", 55864256, 5000, "Waiter", 2);
-//        Waiter waiter2 = new Waiter("mohamed", "cairo", 123, 5000, "waiter", 2);
-//        Waiter waiter3 = new Waiter("ali", "cairo", 112, 5000, "waiter", 2);
-//        Waiter waiter4 = new Waiter("hany", "cairo", 133, 5000, "waiter", 2);
-//
-//        stuff.add(waiter1);
-//        stuff.add(waiter2);
-//        stuff.add(waiter3);
-//        stuff.add(waiter4);
-//        stuff.add(receptionist);
-//        stuff.add(cheff);
-//
-//        Manager manager = new Manager(stuff, "Ahmed adel", "Cairo", 225648);
-//
-//        manager.add_employee(new Stuff("Hoda", "cairo", 555, 5000, "waiter", 2));
-//        manager.printEmplooys();
-//        manager.remove_employee(4);//hany will be removed
-//        manager.printEmplooys();
-//        manager.changePrice(menuitems, price_menuitems, "Koshari", 50);
-//        ////////////////////////////////////////////////////////////////////////////////////
-//        //////////////////////////////////testing cheff class///////////////////////////
-//        cheff.additem("Egyptianmeal", "kofta", 90.0);
-//        menu.displayMenu();
-//        manager.changePrice(menuitems, price_menuitems, "Koshari", 20.5);
-//        cheff.removeitem("kofta");//removing all the changes
-//        menu.displayMenu();
-//        ////////////////////////////////////////////////////////////////////////////////////
-//        //////////////////////////////////testing costumer class///////////////////////////
-//
-//
-//        Customer custom1 = new Customer("Ali");// table 1 is occupied
-//        Customer custom2 = new Customer("Ahmed");// table 3 is occ
-//        Customer custom3 = new Customer("Ahmed");// table 5 to be reserved
-//
-//        System.out.println("first Customer's name is : " + custom1.getName());
-//        System.out.println("first Customer's id is : " + custom1.getId());
-//
-//        System.out.println("----------------------------------------------------------------------------");
-//        System.out.println("----------------------------------------------------------------------------");
-//
-//        System.out.println("second Customer's name is : " + custom2.getName());
-//        System.out.println("second Customer's id is : " + custom2.getId());
-//
-//        System.out.println("----------------------------------------------------------------------------");
-//        System.out.println("----------------------------------------------------------------------------");
-//
-//        //////////////////////////////reservation ////////////////////////////////
-//        custom1.makeReservation(receptionist);
-//        receptionist.displaytab();
-//        System.out.println("----------------------------------------------------------------------------");
-//        custom1.placeOrder(waiter1);
-//        System.out.println("----------------------------------------------------------------------------");
-//        custom1.payBill(waiter1);
-//        System.out.println("----------------------------------------------------------------------------");
-//        custom1.giveFeedback(manager);
-//        System.out.println("----------------------------------------------------------------------------");
-//        custom2.makeReservation(receptionist);
-//        System.out.println("----------------------------------------------------------------------------");
-//        custom2.placeOrder(waiter1);
-//        System.out.println("----------------------------------------------------------------------------");
-//        custom2.payBill(waiter1);
-//        System.out.println("----------------------------------------------------------------------------");
-//        manager.printFeedback();
-//        System.out.println("----------------------------------------------------------------------------");
-//        cheff.viewOrders();
-//        custom1.cancelRes(receptionist);
-//        receptionist.displaytab();
-//        System.out.println("----------------------------------------------------------------------------");
-//        System.out.println("To Start the GUI please press any Character");
-//        Scanner in = new Scanner(System.in);
-//        in.nextLine().charAt(0);
+        //                              testing mannager                               //
+        Cheff cheff = new Cheff("Adel", "cairo", 1552648, 7000, "Chef", 2);
+        Receptionist receptionist = new Receptionist("Hany", "Cairo", 1235255, 7000, "recieptionist", 2, 10);
+        ArrayList<Stuff> stuff = new ArrayList<>();
+        Waiter waiter1 = new Waiter("Ahmed", "cairo", 55864256, 5000, "Waiter", 2);
+        Waiter waiter2 = new Waiter("mohamed", "cairo", 123, 5000, "waiter", 2);
+        Waiter waiter3 = new Waiter("ali", "cairo", 112, 5000, "waiter", 2);
+        Waiter waiter4 = new Waiter("hany", "cairo", 133, 5000, "waiter", 2);
+
+        stuff.add(waiter1);
+        stuff.add(waiter2);
+        stuff.add(waiter3);
+        stuff.add(waiter4);
+        stuff.add(receptionist);
+        stuff.add(cheff);
+
+        Manager manager = new Manager(stuff, "Ahmed adel", "Cairo", 225648);
+
+        manager.add_employee(new Stuff("Hoda", "cairo", 555, 5000, "waiter", 2));
+        manager.printEmplooys();
+        manager.remove_employee(4);//hany will be removed
+        manager.printEmplooys();
+        manager.changePrice(menuitems, price_menuitems, "Koshari", 50);
+        ////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////testing cheff class///////////////////////////
+        cheff.additem("Egyptianmeal", "kofta", 90.0);
+        menu.displayMenu();
+        manager.changePrice(menuitems, price_menuitems, "Koshari", 20.5);
+        cheff.removeitem("kofta");//removing all the changes
+        menu.displayMenu();
+        ////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////testing costumer class///////////////////////////
+
+
+        Customer custom1 = new Customer("Ali");// table 1 is occupied
+        Customer custom2 = new Customer("Ahmed");// table 3 is occ
+        Customer custom3 = new Customer("Ahmed");// table 5 to be reserved
+
+        System.out.println("first Customer's name is : " + custom1.getName());
+        System.out.println("first Customer's id is : " + custom1.getId());
+
+        System.out.println("----------------------------------------------------------------------------");
+        System.out.println("----------------------------------------------------------------------------");
+
+        System.out.println("second Customer's name is : " + custom2.getName());
+        System.out.println("second Customer's id is : " + custom2.getId());
+
+        System.out.println("----------------------------------------------------------------------------");
+        System.out.println("----------------------------------------------------------------------------");
+
+        //////////////////////////////reservation ////////////////////////////////
+        custom1.makeReservation(receptionist);
+        receptionist.displaytab();
+        System.out.println("----------------------------------------------------------------------------");
+        custom1.placeOrder(waiter1);
+        System.out.println("----------------------------------------------------------------------------");
+        custom1.payBill(waiter1);
+        System.out.println("----------------------------------------------------------------------------");
+        custom1.giveFeedback(manager);
+        System.out.println("----------------------------------------------------------------------------");
+        custom2.makeReservation(receptionist);
+        System.out.println("----------------------------------------------------------------------------");
+        custom2.placeOrder(waiter1);
+        System.out.println("----------------------------------------------------------------------------");
+        custom2.payBill(waiter1);
+        System.out.println("----------------------------------------------------------------------------");
+        manager.printFeedback();
+        System.out.println("----------------------------------------------------------------------------");
+        cheff.viewOrders();
+        custom1.cancelRes(receptionist);
+        receptionist.displaytab();
+        System.out.println("----------------------------------------------------------------------------");
+        System.out.println("To Start the GUI please press any Character");
+        Scanner in = new Scanner(System.in);
+        in.nextLine().charAt(0);
 
         /****************************Start of GUI ******************************************/
         launch();
