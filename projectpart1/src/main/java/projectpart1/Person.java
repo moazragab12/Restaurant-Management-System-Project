@@ -47,6 +47,12 @@ public class Person {
         catch (InvalidNameException e) {
             System.out.println(e);
         }
+        finally
+        {
+            this.name = name;
+            this.contactNumber = contactNumber;
+
+        }
     }
 
     /**

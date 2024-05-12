@@ -18,7 +18,8 @@ public class Bill {
     static int billIncremental = 1;
 
     /** The unique identifier of the bill. */
-    static int billNo;
+     int billNo;
+
 
     /** The ID of the customer associated with the bill. */
     private int customerId;

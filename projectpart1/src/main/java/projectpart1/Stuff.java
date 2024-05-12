@@ -13,7 +13,7 @@ package projectpart1;
  * Represents an employee in the restaurant system, inheriting from the Person class.
  */
 public class Stuff extends Person {
-    private int salary;
+    private int salary=5000;
     private int ID = 1;
     private static int count = 1;
     private String roles;
@@ -24,6 +24,7 @@ public class Stuff extends Person {
      */
     public Stuff() {
         ID = count;
+
         count++;
 
     }

@@ -8,6 +8,10 @@ public class Drink extends Items {
     private double price = 50; // Default price
     private String name;
 
+    public String getName() {
+        return name;
+    }
+
     /**
      * Constructs a Drink object with default price.
      */
