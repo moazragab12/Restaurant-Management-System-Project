@@ -29,8 +29,6 @@ git clone https://github.com/moazragab12/Restaurant-Management-System-Project.gi
 cd Restaurant-Management-System-Project.git
 ```
 then you can compile files easily 
-## Documentation
-For more clarifacation about classes and methods, please open [Documentation]((https://moazragab12.github.io/Restaurant-Management-System-Project/)) file after installation of Documentation Folder.
 ## Team
 For information about the team members, please refer to the [Team section](./TeamMembers) in the project.
 
