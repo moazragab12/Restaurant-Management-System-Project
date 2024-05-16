@@ -6,7 +6,7 @@ This project is a restaurant management system developed in Java. It includes bo
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Installation](#installation)
-4. [Documentation](#documentation)
+4. [Documentation]([documentation](https://moazragab12.github.io/Restaurant-Management-System-Project/))
 5. [Team](#team)
 6. [License](#license)
 
