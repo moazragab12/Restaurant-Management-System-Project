@@ -103,38 +103,38 @@ public class HelloApplication extends Application {
           Showing  Exception Handling by using try and catch blocks
          */
 
-        //                              testing mannager                               //
-        Employee cheff = new Cheff("Adel", "cairo", 1552648, 5000, "Chef", 2);
-        Receptionist receptionist = new Receptionist("Hany", "Cairo", 1235255, 7000, "recieptionist", 2, 10);
-        ArrayList<Stuff> stuff = new ArrayList<>();
-        Employee waiter1 = new Waiter("Ahmed", "cairo", 55864256, 5000, "Waiter", 2);
-        Waiter waiter2 = new Waiter("mohamed", "cairo", 123, 5000, "waiter", 2);
-        Waiter waiter3 = new Waiter("ali", "cairo", 112, 5000, "waiter", 2);
-        Waiter waiter4 = new Waiter("hany", "cairo", 133, 5000, "waiter", 2);
-
-        stuff.add(((Waiter)waiter1));
-        stuff.add(waiter2);
-        stuff.add(waiter3);
-        stuff.add(waiter4);
-        stuff.add(receptionist);
-        stuff.add(  ((Cheff) cheff));
-
-        Employee manager = new Manager(stuff, "Ahmed adel", "Cairo", 225648);
-
-
-        ((Manager)manager).add_employee(new Stuff("Hoda", "cairo", 12555, 10000, "waiter", 2));
-        ((Manager)manager).printEmplooys();
-        ((Manager)manager).remove_employee(4);//hany will be removed
-        ((Manager)manager).printEmplooys();
-        ((Manager)manager).changePrice(menuitems, price_menuitems, "Koshari", 50);
-        ////////////////////////////////////////////////////////////////////////////////////
-        //////////////////////////////////testing cheff class///////////////////////////
-        ((Cheff) cheff).additem("Egyptianmeal", "kofta", 90.0);
-        menu.displayMenu();
-        System.out.println("Menu After changing the price of Koshari");
-        ((Manager)manager).changePrice(menuitems, price_menuitems, "Koshari", 20.5);
-        ((Cheff) cheff).removeitem("kofta");//removing all the changes
-        menu.displayMenu();
+//        //                              testing mannager                               //
+//        Employee cheff = new Cheff("Adel", "cairo", 1552648, 5000, "Chef", 2);
+//        Receptionist receptionist = new Receptionist("Hany", "Cairo", 1235255, 7000, "recieptionist", 2, 10);
+//        ArrayList<Stuff> stuff = new ArrayList<>();
+//        Employee waiter1 = new Waiter("Ahmed", "cairo", 55864256, 5000, "Waiter", 2);
+//        Waiter waiter2 = new Waiter("mohamed", "cairo", 123, 5000, "waiter", 2);
+//        Waiter waiter3 = new Waiter("ali", "cairo", 112, 5000, "waiter", 2);
+//        Waiter waiter4 = new Waiter("hany", "cairo", 133, 5000, "waiter", 2);
+//
+//        stuff.add(((Waiter)waiter1));
+//        stuff.add(waiter2);
+//        stuff.add(waiter3);
+//        stuff.add(waiter4);
+//        stuff.add(receptionist);
+//        stuff.add(  ((Cheff) cheff));
+//
+//        Employee manager = new Manager(stuff, "Ahmed adel", "Cairo", 225648);
+//
+//
+//        ((Manager)manager).add_employee(new Stuff("Hoda", "cairo", 12555, 10000, "waiter", 2));
+//        ((Manager)manager).printEmplooys();
+//        ((Manager)manager).remove_employee(4);//hany will be removed
+//        ((Manager)manager).printEmplooys();
+//        ((Manager)manager).changePrice(menuitems, price_menuitems, "Koshari", 50);
+//        ////////////////////////////////////////////////////////////////////////////////////
+//        //////////////////////////////////testing cheff class///////////////////////////
+//        ((Cheff) cheff).additem("Egyptianmeal", "kofta", 90.0);
+//        menu.displayMenu();
+//        System.out.println("Menu After changing the price of Koshari");
+//        ((Manager)manager).changePrice(menuitems, price_menuitems, "Koshari", 20.5);
+//        ((Cheff) cheff).removeitem("kofta");//removing all the changes
+//        menu.displayMenu();
         ////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////testing costumer class///////////////////////////
 

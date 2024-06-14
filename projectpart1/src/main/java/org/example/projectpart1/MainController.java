@@ -152,8 +152,9 @@ public class MainController implements Initializable {
 
         if (keyEvent.getCode().equals(KeyCode.ENTER)) {
             String s = removalText.getText();
+            ind = Integer.parseInt(s)-1;
             System.out.println("ind is " + s);
-            ind = Integer.parseInt(s);
+
             removalText.clear();
         }
     }

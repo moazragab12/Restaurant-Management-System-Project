@@ -2,7 +2,7 @@ module org.example.projectpart1 {
     requires javafx.controls;
     requires javafx.fxml;
     requires jdk.compiler;
-     requires annotations;
+
 
 //    requires com.almasb.fxgl.all;
 

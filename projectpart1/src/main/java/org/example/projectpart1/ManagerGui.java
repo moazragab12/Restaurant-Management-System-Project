@@ -106,11 +106,13 @@ public class ManagerGui implements Initializable {
             y[0] = type.getText();
             y[1] = item.getText();
             y[2] = price.getText();
+            type.clear(); item.clear(); price.clear();
         });
 
         btrem.setOnAction((ActionEvent e) -> {
             System.out.println("item remove: " + remove_item.getText());
             y[3] = remove_item.getText();
+            remove_item.clear();
         });
 
 
@@ -118,6 +120,7 @@ public class ManagerGui implements Initializable {
             System.out.println("Search : " + Search_item.getText());
             //menu.additem(type.getText(),item.getText(),Double.parseDouble(price.getText()));
             y[4] = Search_item.getText();
+            Search_item.clear();
         });
         btNew.setStyle("-fx-border-color: black;-fx-background-color:  Burlywood;");
         btrem.setStyle("-fx-border-color: black;-fx-background-color:  Burlywood;");
